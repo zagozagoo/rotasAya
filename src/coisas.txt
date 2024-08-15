@@ -1,0 +1,9 @@
+npx create-react-app meu-site
+cd meu-site
+npm install react-router-dom
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+
+npm start
