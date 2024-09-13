@@ -7,9 +7,9 @@ const ProductDetails = () => {
   const product = products.find(p => p.id === parseInt(id));
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-pink-100 via-purple-100 to-blue-100 p-8">
+    <div className="min-h-screen bg-gradient-to-r from-pink-100 via-purple-100 to-blue-100 p-8 pt-20">
       {product ? (
-        <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden p-6 flex flex-col md:flex-row items-center">
+        <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden p-6 flex flex-col md:flex-row items-center m-20">
           {/* Imagem do produto */}
           <img
             src={product.image}
