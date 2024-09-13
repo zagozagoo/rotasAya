@@ -3,26 +3,34 @@ import Card from '../components/Card';
 
 const About = () => {
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-4xl font-bold mb-4">Sobre</h1>
-      <p className="text-lg text-gray-700">Aya Takano is one of Japan’s most exciting contemporary artists. A member of Takashi Murakami’s Kaikai Kiki art collective, she makes quirky paintings and illustrations in the ‘Superflat’ style. This is known for its flat, bright colors and cartoonish imagery, which is inspired as much by Japanese traditions such as ukiyo-e as by manga and anime. Takano’s style stands out for its doe-eyed, long-legged young people wearing floaty clothes in fantastical scenarios. But not all is as it seems in her strange world of apparent innocence. We look into the art and ideas of this fascinating artist who has taken the international art world by storm.</p>
-      <div className="p-4 space-y-4 flex items-stretch">
-            <Card
-              title="A Call from the Abyss"
-              description="Awash in imagination, Aya Takano’s 'A Call From the Abyss' transports us to a magical world where boundaries are limitless. Imagine: you stand amidst a vibrant sea, not of water, but of a rainbow palette teeming with fantastical creatures."
-              imageUrl="https://www.singulart.com/blog/wp-content/uploads/2024/04/A-Call-from-the-Abyss.jpg"
-            />
-            <Card
-              title="Sky is the Limit"
-              description="On a deeper level, 'Sky is the Limit' delves into existential themes. It prompts us to contemplate the mysteries of the universe and humankind. Takano’s paintings depict weightless forms in celestial environments. These serve as a reminder to pause and reflect on the essence of reality, the impermanence of time, and the boundless human spirit. The artwork becomes a focal point for philosophical inquiry, inviting viewers to ponder life’s most fundamental questions as they engage with the captivating art."
-              imageUrl="https://www.singulart.com/blog/wp-content/uploads/2024/04/Sky-is-the-Limit.jpg"
-            />
-             <Card
-              title="The Way to Revolution"
-              description="In all her art, whether illustration, drawing, or painting, Takano creates curious fantasy worlds where anything can happen. Her complex stories are colorful, quirky and imaginative, featuring stylized, youthful characters with huge eyes and long legs. While at first glance her art might seem naïve and utopian, it is layered with richly complex meanings."
-              imageUrl="https://cdn.thecollector.com/wp-content/uploads/2021/12/aya-takano-way-to-revolution.jpg"
-            />
-          </div>
+    <div className="min-h-screen bg-gradient-to-r from-pink-100 via-purple-100 to-blue-100 p-8 pt-20">
+      <h1 className="text-5xl font-extrabold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-400 m-0 p-2">
+        Sobre Aya Takano
+      </h1>
+      <p className="text-xl text-gray-700 mb-8 max-w-4xl mx-auto text-center">
+        Aya Takano é uma das artistas contemporâneas mais emocionantes do Japão. Membro do coletivo artístico Kaikai Kiki de Takashi Murakami, ela cria pinturas e ilustrações excêntricas no estilo 'Superflat'. Este estilo é conhecido por suas cores vibrantes e imagens cartunescas, inspiradas tanto por tradições japonesas como o ukiyo-e quanto por mangás e animes.
+      </p>
+      <p className="text-lg text-gray-700 mb-8 max-w-4xl mx-auto text-center">
+        O estilo de Takano se destaca pelos personagens de olhos grandes e pernas longas, vestindo roupas fluidas em cenários fantásticos. Mas nem tudo é o que parece nesse mundo estranho de aparente inocência. Vamos mergulhar na arte e nas ideias dessa fascinante artista que conquistou o mundo da arte internacional.
+      </p>
+      
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <Card
+          title="A Call from the Abyss"
+          description="Cheio de imaginação, 'A Call From the Abyss' de Aya Takano nos transporta para um mundo mágico onde os limites são infinitos. Imagine-se em um mar vibrante, não de água, mas de uma paleta arco-íris repleta de criaturas fantásticas."
+          imageUrl="https://www.singulart.com/blog/wp-content/uploads/2024/04/A-Call-from-the-Abyss.jpg"
+        />
+        <Card
+          title="Sky is the Limit"
+          description="Em um nível mais profundo, 'Sky is the Limit' aborda temas existenciais. Ela nos convida a contemplar os mistérios do universo e da humanidade. As pinturas de Takano retratam formas leves em ambientes celestiais, lembrando-nos de pausar e refletir sobre a essência da realidade."
+          imageUrl="https://www.singulart.com/blog/wp-content/uploads/2024/04/Sky-is-the-Limit.jpg"
+        />
+        <Card
+          title="The Way to Revolution"
+          description="Takano cria mundos de fantasia curiosos, coloridos e imaginativos, repletos de personagens jovens e estilizados com olhos enormes e pernas longas. Apesar da aparência utópica, sua arte é rica em significados complexos."
+          imageUrl="https://cdn.thecollector.com/wp-content/uploads/2021/12/aya-takano-way-to-revolution.jpg"
+        />
+      </div>
     </div>
   );
 };

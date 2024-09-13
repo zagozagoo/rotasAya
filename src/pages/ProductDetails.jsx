@@ -1,26 +1,36 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-
-const products = [
-  { id: 1, name: 'Aya Mousepad', price: 'R$190,00', image: 'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcT765FVGKluzJDP0l7FMI_zNXGuCV2zG6HP2LPKuRs5vlgIjY4sGjrt1oVezqIJWbkW6Rn05aNQa97l-OIrOaDt9CEym6Dq5r6hUQy_tUE&usqp=CAE' },
-  { id: 2, name: 'Case silicone', price: 'R$30,00', image: 'https://i.etsystatic.com/47730843/r/il/af2abc/6179906670/il_fullxfull.6179906670_rwaa.jpg' },
-  { id: 3, name: 'Tapeçaria', price: 'R$399,99', image: 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT9RQiob5x7mx1bT3EI4VBMEeA8RFJC0K4xfW87Y4BP2Z8yJXiHA9HadiXWuwghO6VgSvVO7I2RphE6FWbo7IGjG0Q-TuH3Bh3vLS5wZCFJ4e-9Yso6ErFg&usqp=CAE' }
-];
+import { products } from '../products';
 
 const ProductDetails = () => {
   const { id } = useParams();
   const product = products.find(p => p.id === parseInt(id));
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="min-h-screen bg-gradient-to-r from-pink-100 via-purple-100 to-blue-100 p-8">
       {product ? (
-        <div className="max-w-md mx-auto">
-          <img src={product.image} alt={product.name} className="w-full h-60 object-cover rounded-lg mb-4" />
-          <h1 className="text-4xl font-bold mb-2">{product.name}</h1>
-          <p className="text-2xl text-gray-600">{product.price}</p>
+        <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden p-6 flex flex-col md:flex-row items-center">
+          {/* Imagem do produto */}
+          <img
+            src={product.image}
+            alt={product.name}
+            className="w-full md:w-1/2 h-80 object-cover rounded-lg mb-6 md:mb-0 md:mr-6"
+          />
+          
+          {/* Detalhes do produto */}
+          <div className="flex-1">
+            <h1 className="text-4xl font-bold mb-4 text-gray-800">{product.name}</h1>
+            <p className="text-2xl text-gray-600 mb-4">{product.price}</p>
+            <p className="text-gray-700 mb-6">Esse produto é perfeito para fãs da arte de Aya Takano. Garanta já o seu!</p>
+            
+            {/* Botão de compra */}
+            <button className="bg-purple-500 text-white px-6 py-3 rounded-lg hover:bg-purple-600 transition-colors duration-300">
+              Comprar agora
+            </button>
+          </div>
         </div>
       ) : (
-        <p>Produto não encontrado!</p>
+        <p className="text-center text-gray-700 text-2xl">Produto não encontrado!</p>
       )}
     </div>
   );
